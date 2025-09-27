@@ -1,4 +1,5 @@
-import * as fs from 'fs';
+import * as fs from 'node:fs';
+import * as path from 'node:path'
 
 let output_dirs: string[] = [];
 let images: string[] = [];
@@ -6,6 +7,7 @@ let images: string[] = [];
 fs.readdirSync(__dirname).forEach(file => {
     if(fs.lstatSync(file).isDirectory()){
         // if the folder name begins with a date YYYY.MM.DD
+        path.basename(path.dirname(file))
     } else{
         // check if this file is an image
 
