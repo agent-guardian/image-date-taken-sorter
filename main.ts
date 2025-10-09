@@ -42,5 +42,11 @@ fs.readdirSync(__dirname).forEach(file => {
     }
 })
 
+images.keys().forEach(img =>{
+    let newPath: string = output_dirs.get(images.get(img)) + path.basename(path.dirname(img));
+
+    
+})
+
 //Move all the files
 
