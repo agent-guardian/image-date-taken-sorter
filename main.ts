@@ -82,7 +82,7 @@ for(let [img, imgDate] of images.entries()) {
     }
 
     fs.rename(img, newPath, (err) =>{
-        console.error("Error moving image: %S: %S", img, err);
+        console.error("Error moving image: %s: %s", img, err?.message);
     });
 
     console.log("Moved Image: %s to %s", img, newPath);
